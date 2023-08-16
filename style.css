@@ -1,0 +1,191 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap');
+  *{
+    font-family: 'ropa sans';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .header{
+    position: fixed;
+    top: 0;
+    margin: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: transparent;
+    color: #0a0a0a;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    z-index: 99;
+  }
+  .header .logo{
+    font-size: 1em;
+    text-decoration: none;
+    position: relative;
+    color: #0a0a0a;
+
+  }
+  .navbar a{
+    text-decoration: none;
+    font-size: 1.4em;
+    color: #151313;
+    position: relative;
+    margin-left: 30px;
+    
+  }
+.navbar a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: .5s;
+}
+.nav a:hover::after{
+  transform: scale(1);
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #eff0f4;
+}
+
+.container{
+  position: relative;
+  max-width: 1200px;
+  width: 100%;
+  
+  padding: 40px;
+
+}
+
+.container .box{
+  padding: 50px 30px;
+ 
+  overflow: hidden;
+}
+
+
+.image img{
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  opacity: .8;
+  border: 3px solid #fff;
+}
+.card{
+  position: relative;
+  width: 350px;
+  height: 350px;
+  background: #e1e4e1;
+  box-shadow: inset 20px 20px 20px rgba(0, 0, 0, .05),
+  5px 25px 20px rgba(0, 0, 0, .05),
+  5px 20px 30px rgba(0, 0, 0, .05),
+  inset -20px -20px 25px rgba(255, 255, 255, .09);
+  border-radius: 49% 51% 41% 59% / 50% 59% 41% 50%;
+}
+.card:hover{
+  border-radius: 50%;
+  transition: .5s ease-in-out;
+}
+
+.card::before{
+  content: '';
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 50px;
+  left: 65px;
+  background: #fff;
+  border-radius: 50%;
+  opacity: .9s;
+}
+
+.card::after{
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 90px;
+  left: 85px;
+  background: #fff;
+  border-radius: 50%;
+  opacity: .9s;
+}
+
+.card .card-content{
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.card-content .name-profession{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #0b0a0a;
+}
+.name-profession .name{
+  font-size: 30px;
+  font-weight: 500;
+}
+.name-profession .profession{
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.card-content .rating{
+  display: flex;
+  align-items: center;
+  margin-top: 18px;
+}
+.card-content .rating i{
+  font-size: 20px;
+  color: var(--clr);
+  margin: 0 2px;
+  opacity: .7s;
+}
+
+.card-content button{
+  position: relative;
+  padding: 8px 30px;
+  background: rgb(227, 236, 237);
+  border: none;
+  border-radius: 40px;
+  box-shadow: 0 2px 2px rgb(0, 0, .25);
+  cursor: pointer;
+  font-size: 15px;
+  
+  opacity: .7s;
+  margin-top: 30px;
+}
+
+.card-content button::before{
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 55%;
+  height: 5px;
+  background: rgb(6, 6, 3);
+  border-radius: 5px;
+}
+
+.box .swiper-button-next{
+  right: 0;
+}
+
+.box .swiper-button-prev{
+  left: 0;
+}
